@@ -13,4 +13,10 @@
 			<class name="com.btcturk.test.runner.TestRunner" />
 		</classes>
 	</test>
+	<test name="Search Test Firefox">
+		<parameter name="driverType" value="FIREFOX" />
+		<classes>
+			<class name="com.btcturk.test.runner.TestRunner" />
+		</classes>
+	</test>
 </suite>
