@@ -68,4 +68,19 @@ public class StepsCommon {
 		assertion.assertSearchButton();
 
 	}
+	
+	@Then("^I'm now on URL contains \"([^\"]*)\" in new tab$")
+	public void i_am_on_url_contains_in_new_tab(String arg1) throws Throwable {
+		
+		Driver.switchTab();
+		assertion.assertUrlContains(arg1);
+		
+	}
+	
+	@Then("^I'm now on URL contains \"([^\"]*)\"$")
+	public void i_am_on_url_contains(String arg1) throws Throwable {
+		
+		assertion.assertUrlContains(arg1);
+		
+	}
 }

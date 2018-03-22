@@ -56,7 +56,7 @@ public class ActionsCommon {
 	public void clickLink(String linkText) {
 		
 		WebElement link = Driver.instance.findElement(
-				By.xpath("//button[(text() = '" + linkText + "') or ./*/text() = '" + linkText + "']"));
+				By.xpath("//a[(text() = '" + linkText + "') or ./*/text() = '" + linkText + "']"));
 		link.click();
 		
 	}

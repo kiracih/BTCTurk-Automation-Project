@@ -5,6 +5,8 @@ import static io.github.bonigarcia.wdm.DriverManagerType.EDGE;
 import static io.github.bonigarcia.wdm.DriverManagerType.FIREFOX;
 import static io.github.bonigarcia.wdm.DriverManagerType.IEXPLORER;
 
+import java.util.ArrayList;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -56,5 +58,11 @@ public class Driver {
 	public static void close() {
 
 		instance.quit();
+	}
+	
+	public static void switchTab() {
+		
+		ArrayList<String> tabs = new ArrayList<String>(instance.getWindowHandles());
+		instance.switchTo().window(tabs.get(1));
 	}
 }
