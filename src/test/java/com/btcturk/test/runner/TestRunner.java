@@ -11,7 +11,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 import io.github.bonigarcia.wdm.DriverManagerType;
 
 @CucumberOptions(features = "src/test/resources/features", glue = { "com.btcturk.test.stepDefinitions" }, plugin = { "pretty",
-		"html:target/cucumber" }, tags = {"@AcceptanceTest"})
+		"html:target/cucumber" }, tags = {"@Test"})
 public class TestRunner extends AbstractTestNGCucumberTests {
 
 	@Parameters({"driverType"})

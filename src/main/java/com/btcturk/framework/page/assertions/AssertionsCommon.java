@@ -52,4 +52,25 @@ public class AssertionsCommon {
 		
 	}
 
+	public void assertLink(String linkText) {
+		
+		WebElement link = Driver.instance.findElement(
+				new ByChained(By.tagName("a"), By.xpath("//*[contains(text(), '" + linkText + "')]")));
+
+		Assert.assertNotNull(link);
+		
+	}
+
+	public void assertSearchBar() {
+		
+		Assert.assertNotNull(bPage.searchInput);
+		
+	}
+
+	public void assertSearchButton() {
+
+		Assert.assertNotNull(bPage.searchButton);
+		
+	}
+
 }
